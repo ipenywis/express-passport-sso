@@ -4,15 +4,23 @@ const sequelize = require("../database");
 const User = sequelize.define("User", {
   fullName: {
     type: DataTypes.STRING,
-    allowNull: false,
+    allowNull: true,
   },
   email: {
     type: DataTypes.STRING,
-    allowNull: false,
+    allowNull: true,
   },
   password: {
     type: DataTypes.STRING,
-    allowNull: false,
+    allowNull: true,
+  },
+  googleId: {
+    type: DataTypes.STRING,
+    allowNull: true,
+  },
+  picture: {
+    type: DataTypes.STRING,
+    allowNull: true,
   },
 });
 
